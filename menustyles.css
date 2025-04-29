@@ -1,0 +1,214 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f1eb; /* Warm, light background */
+    color: #333;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2.5em;
+    color: #6b3e26; /* Warm brown */
+    animation: fadeInDown 1s ease-in-out; /* Animation for header */
+}
+
+/* Keyframes for header animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section styles */
+.section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out; /* Animation for sections */
+}
+
+/* Keyframes for section animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Heading inside sections */
+.section h2 {
+    font-size: 2em;
+    color: #6b3e26;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease-in-out; /* Apply fadeInUp to h2 */
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu item styles */
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    animation: fadeInUp 1.3s ease-in-out; /* Apply fadeInUp to menu items */
+}
+
+/* Menu item hover effect */
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu item image */
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Menu item image hover effect */
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Menu item text */
+.menu-item span {
+    font-size: 1.2em;
+    color: #333;
+    flex-grow: 1;
+}
+
+/* Menu item price */
+.menu-item .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #6b3e26;
+    margin-left: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #6b3e26;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeInUp 1.5s ease-in-out; /* Apply fadeInUp to footer */
+}
+
+/* Footer sections (Contact, About, Menu) */
+footer .section {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: none;
+    animation: none; /* Remove section animation for footer links */
+}
+
+/* Footer section headings */
+footer .section h2 {
+    font-size: 1.5em;
+    color: #f8c291; /* Warm peach for contrast */
+    animation: none; /* Remove fadeInUp for footer headings */
+}
+
+/* Footer paragraph */
+footer p {
+    font-size: 0.9em;
+    color: #f8f1eb;
+    margin-top: 20px;
+}
+
+/* Hover effect for footer section headings */
+footer .section h2:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+        .menu-item img {
+            animation: fadeInLeft 1.4s ease-in-out;
+        }
+        @keyframes fadeInLeft {
+            0% { opacity: 0; transform: translateX(-20px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+    
+        .menu-item .price:hover {
+            color: #f8c291;
+            transition: color 0.3s ease;
+        }
+
+    footer .section {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.footer-link {
+    display: inline-block;
+    margin: 0 20px;
+    color: #f8c291;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.footer-link:hover {
+    color: #fff;
+}

@@ -1,0 +1,184 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f1eb; /* Warm, light background */
+    color: #333;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2.5em;
+    color: #6b3e26; /* Warm brown */
+    animation: fadeInDown 1s ease-in-out; /* Animation for header */
+}
+
+/* Keyframes for header animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Paragraph styles */
+p {
+    max-width: 800px;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Apply fadeInUp to paragraphs inside sections */
+.section p {
+    animation: fadeInUp 1.2s ease-in-out; /* New fadeInUp animation */
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section styles */
+.section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out; /* Animation for sections */
+}
+
+/* Keyframes for section animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Image styles */
+.about-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Image hover effect */
+.about-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading inside sections */
+.section h2 {
+    font-size: 2em;
+    color: #6b3e26;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #6b3e26;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeInUp 1.5s ease-in-out; /* Apply fadeInUp to footer */
+}
+
+/* Navigation styles */
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+footer nav ul li {
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+footer nav ul li a:hover {
+    color: #f8c291; /* Warm peach color on hover */
+}
+
+/* Animated underline effect for nav links */
+footer nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #f8c291;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+footer nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Footer paragraph */
+footer p {
+    font-size: 0.9em;
+    color: #f8f1eb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+
+    footer nav ul li {
+        margin: 10px 0;
+    }
+}
